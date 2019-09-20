@@ -18,7 +18,19 @@
       </div>
     </header>
     <router-view />
-    <footer>     
+    <footer>
+      <div class="copyrights">(c) Publicis Groupe 2019</div> 
+      <div class="social_icons">
+        <div class="icon_wrapper">
+          <div class="vk"></div>
+        </div>
+        <div class="icon_wrapper">
+          <div class="instagramm"></div>
+        </div>
+        <div class="icon_wrapper">
+          <div class="facebook"></div>
+        </div>
+      </div>    
     </footer>
   </div>
 </template>
@@ -119,9 +131,61 @@ footer {
   max-width: 1140px;
   width: 100%;
   height: 76px;
-  left: 0px;
-  top: 692px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background: #424242;
+  .copyrights {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    width: 130px;
+    height: 25px;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #C4C4C4;
+    margin-left: 45px;
+  }
+  .social_icons {
+    width: 136px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 45px;
+    .icon_wrapper {
+      width: 30px;
+      height: 30px;
+      background-image: url("assets/circle.png");
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .vk {
+        background-image: url("assets/vk.png");
+        background-repeat:no-repeat;
+        background-position-y: 10px;
+        background-position-x: 6px;
+        // background-size: contain;
+        width: 30px;
+        height: 30px;
+      }
+      .instagramm {
+
+      }
+      .facebook {
+
+      }
+    }
+  }
 }
 
 </style>
