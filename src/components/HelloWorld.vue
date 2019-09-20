@@ -121,7 +121,7 @@ a {
       align-items: center;
       width: 200px;
       max-height: 34px;
-      height: 16%;
+      height: 18%;
       .auth_enter {
         border: none;
         background-color: transparent;
@@ -129,6 +129,7 @@ a {
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
+        height: 25px;
         // line-height: 30px;
         text-align: center;
         text-transform: uppercase;
@@ -136,6 +137,7 @@ a {
         width: auto;
         outline: none;
         border-bottom: 1px solid transparent;
+        transform: scale(1, 0.95);
         // min-width: 80px; 
       }
       .auth_enter_active {

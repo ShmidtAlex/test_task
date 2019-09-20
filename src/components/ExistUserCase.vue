@@ -2,7 +2,7 @@
   <div class="user_data_wrapper">
       <input type="text" class="user_data" name="login" required="true" placeholder="логин">
       <input type="password" class="user_data" name="password" required="true" placeholder="пароль">
-      <input type="submit" class="submit_button" value="войти">
+      <button type="submit" class="submit_button"><span class="normal_font">войти</span></button>
   </div>
 </template>
 
@@ -81,11 +81,23 @@ a {
     outline: none;
     border: none;
     font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 30px;
-  text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    
+    // line-height: 30px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    .normal_font {
+      width: 47px;
+      height: 31px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      transform: scale(1, 0.9);
+    }
   }
 }
 
