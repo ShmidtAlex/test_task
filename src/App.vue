@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <header id="nav">
       <div class="logo_block__wrapper" >
         <div class="croppedLogo"></div>
       </div>
@@ -16,8 +16,10 @@
         но пока так -->
         <div @click="isUserLoggedIn = !isUserLoggedIn" class="user_logo" :class="{_active: isUserLoggedIn}"></div>
       </div>
-    </div>
+    </header>
     <router-view />
+    <footer>     
+    </footer>
   </div>
 </template>
 <script>
@@ -112,6 +114,14 @@
   .user_logo._active {
     background-image: url("assets/user_active.png");
   }
+}
+footer {
+  max-width: 1140px;
+  width: 100%;
+  height: 76px;
+  left: 0px;
+  top: 692px;
+  background: #424242;
 }
 
 </style>

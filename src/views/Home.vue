@@ -32,12 +32,13 @@ export default {
   }
   .background_container {
     width: 1140px;
-    height: 768px;
+    height: 100%;
     background: #FFFFFF;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: 5px;
   }
 
   .background {

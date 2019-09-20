@@ -80,6 +80,12 @@ a {
     align-items: center;
     outline: none;
     border: none;
+    font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
   }
 }
 
