@@ -1,7 +1,12 @@
+
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="background_container">
+      <div class="background">
+        <HelloWorld msg="Welcome to Your Vue.js App" />
+      </div>
+    </div>
+    
   </div>
 </template>
 
@@ -16,3 +21,34 @@ export default {
   }
 };
 </script>
+<style>
+  .home {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .background_container {
+    width: 1140px;
+    height: 768px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .background {
+    background-image: url("../assets/Background.png");
+    background-size: cover;
+    width: 100%;
+    height: 580px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
