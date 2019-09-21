@@ -19,11 +19,7 @@
          <div v-if="newUser" class="enter_user-data_block">
           <NewUser />
         </div>
-      </div> 
-      
-      
-      
-      
+      </div>
     </form>
   </div>
 </template>
@@ -94,19 +90,23 @@ a {
   .up_content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    height: 35%;
+    height: 109px;
+    width: 100%;
     .caption_block {
-      margin-top: 26px;
+      margin-top: 22px;
       width: 100%;
       height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
       p {
         font-family: Roboto;
         font-style: normal;
         font-weight: bold;
         font-size: 22px;
-        line-height: 47px;
+        // line-height: 47px;
         text-align: center;
         text-transform: uppercase;
         color: #86764B;
@@ -118,10 +118,10 @@ a {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       width: 200px;
-      max-height: 34px;
-      height: 18%;
+      height: 34px;
+      margin-bottom: -24px;
       .auth_enter {
         border: none;
         background-color: transparent;
@@ -130,7 +130,6 @@ a {
         font-weight: normal;
         font-size: 14px;
         height: 25px;
-        // line-height: 30px;
         text-align: center;
         text-transform: uppercase;
         color: #000000;
@@ -138,7 +137,10 @@ a {
         outline: none;
         border-bottom: 1px solid transparent;
         transform: scale(1, 0.95);
-        // min-width: 80px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
       }
       .auth_enter_active {
         border-bottom: 1px solid #85754A;
@@ -147,15 +149,13 @@ a {
     }
   }
   .low_content {
-    height: 80%;
+    height: 258px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
   }
-   
- 
   .enter_user-data_block {
     display: flex;
     flex-direction: column;
