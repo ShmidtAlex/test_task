@@ -30,8 +30,9 @@
         </div>
         <div class="icon_wrapper">
           <div class="instagramm">
-            <div class="circle"></div>
-            <div class="small-circle"></div>
+            <div class="circle">
+              <div class="small-circle"></div>
+            </div>
           </div>
         </div>
         <div class="icon_wrapper">
@@ -164,7 +165,7 @@
     }
   }
   footer {
-    max-width: 1140px;
+    // max-width: 1140px;
     width: 100%;
     height: 76px;
     display: flex;
@@ -188,6 +189,9 @@
       text-transform: uppercase;
       color: #C4C4C4;
       margin-left: 32px;
+    }
+    .copyrights:hover {
+      color: #DFC800;
     }
     .social_icons {
       width: 136px;
@@ -214,7 +218,8 @@
           height: 30px;
         }
         .vk:hover {
-
+            // &:extend(.vk);
+           background-image: url("assets/vk-hover.png");
         }
         .instagramm {
           background-image: url("assets/fra.png");
@@ -233,8 +238,8 @@
             .small-circle {
               background-image: url("assets/insta-small.png");
               background-repeat:no-repeat;
-              background-position-y: 11px;
-              background-position-x: 11px;
+              background-position-y: 10px;
+              background-position-x: 17px;
               width: 30px;
               height: 30px;
             }
@@ -243,24 +248,22 @@
             }
           }
           .circle:hover {
-            background-image: url("assets/fra-hover.png");
-            // background-position-y: 0px;
-            // background-position-x: 0px;
+            background-image: url("assets/instagramm-hover.png");
           }
         }
         .instagramm:hover {
-          // background-image: url("assets/circle-hover.png");
-          // background-position-y: 0px;
-          // background-position-x: 0px;
+          background-image: url("assets/fra-hover.png");
         }
         .facebook {
           background-image: url("assets/facebook.png");
           background-repeat:no-repeat;
           background-position-y: 8px;
           background-position-x: 11px;
-          // background-size: contain;
           width: 30px;
           height: 30px;
+        }
+        .facebook:hover {
+          background-image: url("assets/face-hover.png");
         }
       }
       .icon_wrapper:hover {

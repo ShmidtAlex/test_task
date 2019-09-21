@@ -1,8 +1,8 @@
 <template>
   <div class="exist_user_wrapper">
     <div class="user_data_wrapper">
-        <input type="text" class="user_data" name="login" required="true" placeholder="логин">
-        <input type="password" class="user_data" name="password" required="true" placeholder="пароль">      
+        <input type="text" class="user_data" :class="{_blured: loginValue}" name="login" required="true" placeholder="логин" :value="b" @focus="loginFocused" @blur="loginBlured">
+        <input type="password" class="user_data" :class="{_bluredPass: passwordValue}" name="password" required="true" :placeholder="c"  @focus="passwordFocused" @blur="passwordBlured">      
     </div>
     <div class="button_wrapper">
       <button type="submit" class="submit_button"><span class="normal_font">войти</span></button>
@@ -18,11 +18,38 @@ export default {
   },
   data: function() {
     return {
-
+      loginValue: false,
+      passwordValue: false,
+      testUserEmail: 'shmidt.alex@gmail.ru',
+    }
+  },
+  computed: {
+    b: function() {
+      if( this.loginValue) {
+        return "Ввод ";
+      }      
+    },
+    c: function() {
+     if(this.passwordValue) {
+        // return '';
+      } else {
+        return "пароль"
+      }     
     }
   },
   methods: {
-   
+    loginFocused: function() {
+      this.loginValue = true;
+    },
+    loginBlured: function() {
+      this.loginValue = false;
+    },
+    passwordFocused: function() {
+      this.passwordValue = true;
+    },
+    passwordBlured: function() {
+      this.passwordValue = false;
+    }
   }
 };
 </script>
@@ -84,6 +111,18 @@ a {
   .user_data:first-child {
     margin-top: 10px;
   }
+  ._blured {
+    color: #000000;
+    caret-color: #DFC800;
+  }
+  ._bluredPass {
+    color: #000000;
+    font-family: Verdana, Geneva, sans-serif;
+    letter-spacing: -.75px;
+    font-weight: 800;
+    font-size: 20px;
+    caret-color: #DFC800;
+  }
 }
 .button_wrapper {
     display: -webkit-box;
@@ -121,6 +160,12 @@ a {
         font-size: 14px;
         transform: scale(1, 0.9);
       }
+    }
+    .submit_button:hover {
+      background-color: #424242;
+    }
+    .submit_button:active {
+      background-color: #000000;
     }
   }
 
