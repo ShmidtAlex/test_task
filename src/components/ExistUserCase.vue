@@ -1,10 +1,11 @@
 <template>
   <div class="exist_user_wrapper">
     <div class="user_data_wrapper">
-        <input type="text" class="user_data" :class="{_blured: loginValue}" name="login" required="true" placeholder="логин" :value="b" @focus="loginFocused" @blur="loginBlured">
-        <input type="password" class="user_data" :class="{_bluredPass: passwordValue}" name="password" required="true" :placeholder="c"  @focus="passwordFocused" @blur="passwordBlured">      
+        <input type="text" class="user_data" :class="{_blured: loginValue}" name="login" required="true" placeholder="логин" value="" @focus="loginFocused" @blur="loginBlured">
+        <input type="password" class="user_data" :class="{_bluredPass: passwordValue}" name="password" required="true" :placeholder="c"  @focus="passwordFocused" @blur="passwordBlured">  
+        <div class="errorField" :class="{_displayed: showFieldError }"> Пользователя с таким именем не существует!</div>    
     </div>
-    <div class="button_wrapper">
+    <div @click="animateWrongInput" class="button_wrapper">
       <button type="submit" class="submit_button"><span class="normal_font">войти</span></button>
     </div>
   </div>
@@ -20,22 +21,25 @@ export default {
     return {
       loginValue: false,
       passwordValue: false,
-      testUserEmail: 'shmidt.alex@gmail.ru',
+      testUserEmail: 'shmidt@gmail.ru',
+      showFieldError: false,
     }
   },
   computed: {
-    b: function() {
-      if( this.loginValue) {
-        return "Ввод ";
-      }      
-    },
     c: function() {
      if(this.passwordValue) {
-        // return '';
+        return;
       } else {
         return "пароль"
       }     
-    }
+    },
+    // a: function() {
+    //   if(this.showFieldError) {
+    //     return true;
+    //   } else {
+    //     return false;
+    //   }
+    // }
   },
   methods: {
     loginFocused: function() {
@@ -49,6 +53,18 @@ export default {
     },
     passwordBlured: function() {
       this.passwordValue = false;
+    },
+    animateWrongInput: function() {
+      event.preventDefault();
+      let self = this;
+      let inputElement = document.querySelector('[name="login"]');
+      if (!inputElement.value.match(this.testUserEmail)) {
+        self.showFieldError = true;
+      }
+      setTimeout(function() {
+        self.showFieldError = false;
+      }, 3000);
+      // console.log(inputElement.value);
     }
   }
 };
@@ -87,6 +103,7 @@ a {
   height: 54%;
   border-radius: 4px; 
   margin-top: -4px; 
+  position:relative;
   .user_data {
     width: 346px;
     height: 44px;
@@ -123,6 +140,19 @@ a {
     font-size: 20px;
     caret-color: #DFC800;
   }
+}
+.errorField {
+  display: none;
+  position: absolute;
+  width: 346px;
+  height: 40px;
+  background-color: #FDEDED;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+._displayed {
+  display: flex;
 }
 .button_wrapper {
     display: -webkit-box;
