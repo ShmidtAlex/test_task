@@ -22,6 +22,7 @@ export default {
 };
 </script>
 <style>
+@media (min-width: 569px) {
   .home {
     width: 100%;
     /*max-width: 1140px;*/
@@ -31,7 +32,7 @@ export default {
     align-items: center;
   }
   .background_container {
-    width: 1140px;
+    width: 100%;
     height: 100%;
     background: #FFFFFF;
     display: flex;
@@ -52,4 +53,38 @@ export default {
     justify-content: center;
     align-items: center;
   }
+}
+@media (max-width: 568px) {
+  .home {
+    width: 100%;
+    /*max-width: 1140px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .background_container {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 5px;
+  }
+
+  .background {
+    /*background-image: url("../assets/Background.png");*/
+    background: #F6F6F6;
+    background-size: cover;
+    width: 100%;
+    height: 580px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}  
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="exist_user_wrapper">
     <div class="user_data_wrapper">
-        <input type="text" class="user_data" :class="{_blured: loginValue}" name="login" required="true" placeholder="логин" value="" @focus="loginFocused" @blur="loginBlured">
+        <input type="text" class="user_data" :class="{_blured: loginValue, _bordered: showFieldError}" name="login" required="true" placeholder="логин" value="" @focus="loginFocused" @blur="loginBlured">
         <input type="password" class="user_data" :class="{_bluredPass: passwordValue}" name="password" required="true" :placeholder="c"  @focus="passwordFocused" @blur="passwordBlured">  
         <div class="errorField" :class="{_displayed: showFieldError }"> Пользователя с таким именем не существует!</div>    
     </div>
@@ -66,6 +66,48 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
+@media (max-width: 568px) {
+  .user_data_wrapper {
+    position: static;
+    .user_data {
+      max-width: 200px;
+    }
+  }
+  .errorField {
+    display: none;
+    position: absolute;
+    max-width: 200px;
+    top: 290px;
+    height: 40px;
+    background-color: #FDEDED;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // padding: 0 4px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  
+}
+@media (min-width: 569px) {
+  .user_data_wrapper {
+    position: relative;
+  }
+  .errorField {
+    display: none;
+    position: absolute;
+    width: 346px;
+    height: 40px;
+    background-color: #FDEDED;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // padding: 0 4px;
+    font-size: 13px;
+    border-radius: 4px;
+    top: 65px;
+  }
+}
 h3 {
   margin: 40px 0 0;
 }
@@ -97,12 +139,9 @@ a {
   height: 54%;
   border-radius: 4px; 
   margin-top: -4px; 
-  position:relative;
   .user_data {
     width: 346px;
     height: 44px;
-    left: 339px;
-    top: 349px;
     background: #FFFFFF;
     border: 1px solid #E5E5E5;
     box-sizing: border-box;
@@ -134,16 +173,9 @@ a {
     font-size: 20px;
     caret-color: #DFC800;
   }
-}
-.errorField {
-  display: none;
-  position: absolute;
-  width: 346px;
-  height: 40px;
-  background-color: #FDEDED;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  ._bordered {
+    border-bottom: 1px solid #FF7979;
+  }
 }
 ._displayed {
   display: flex;
@@ -192,4 +224,5 @@ a {
       background-color: #000000;
     }
   }
+ 
 </style>
