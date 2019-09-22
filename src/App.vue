@@ -20,7 +20,7 @@
         <!-- <div class="right_block_container"> -->
           <div class="tabs_group" :class="{ tabs_group_active: isMenuExpanded }">
             <router-link to="/">media</router-link> 
-            <router-link to="/about">digital</router-link>
+            <router-link to="/digital">digital</router-link>
             <router-link to="/social">social</router-link>
             <router-link to="/commerce">commerce</router-link>
             <router-link to="/people">people</router-link> 
@@ -78,7 +78,6 @@
     align-items:center;
   }
   #nav {
-    // padding: 15px;
     width: 100%;
     height: 100px;
     width: 100%;
@@ -289,7 +288,6 @@
 }
 @media (max-width: 568px) {
    #app {
-    // font-family: "Avenir", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -331,7 +329,6 @@
       width: 100%;
       margin: 0 20px;
     }
-
   }
   .menu_collapsed {
     display: flex;
@@ -425,13 +422,6 @@
     transition: all 1s ease-in-out;
     opacity: 0;
     overflow: hidden;
-    // a:first-child {
-    //   margin-left: 40px;
-    // }
-    // a:last-child {
-    //   margin-right: 40px;
-    // }
-    // padding: 0 20px;
   }
   .tabs_group_active {
     height: 250px;
@@ -512,7 +502,6 @@
           height: 30px;
         }
         .vk:hover {
-            // &:extend(.vk);
            background-image: url("assets/vk-hover.png");
         }
         .instagramm {
