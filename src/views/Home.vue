@@ -3,7 +3,7 @@
   <div class="home">
     <div class="background_container">
       <div class="background">
-        <HelloWorld msg="Welcome to Your Vue.js App" />
+        <HelloWorld  />
       </div>
     </div>
     
@@ -30,6 +30,7 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 3px;
   }
   .background_container {
     width: 100%;

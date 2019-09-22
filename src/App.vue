@@ -55,8 +55,12 @@
   </div>
 </template>
 <script>
-  export default {
+import Vue from 'vue';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+Vue.use(VueAxios, axios);
 
+  export default {
     data: function() {
       return {
         isUserLoggedIn: false,
@@ -76,6 +80,7 @@
     display: flex;
     flex-direction: column;
     align-items:center;
+    background-color: #E5E5E5;
   }
   #nav {
     width: 100%;
@@ -86,9 +91,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: #FFFFFF;
     a {
       font-weight: bold;
-      color: #2c3e50;
+      color: #000000;
       text-decoration: none;
       &.router-link-exact-active {
         color: #85754A;
@@ -97,6 +103,7 @@
     a:hover {
       text-decoration: underline;
       font-weight: bold;
+      color: #2c3e50;
     }
     .header_container {
       display: flex;
