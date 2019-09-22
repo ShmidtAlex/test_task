@@ -52,15 +52,8 @@ export default {
   }
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-// .authorisation_block {
-//    box-sizing:border-box;
-// }
-// * {
-//   box-sizing: inherit;
-// }
+
 h3 {
   margin: 40px 0 0;
 }

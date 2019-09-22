@@ -33,13 +33,6 @@ export default {
         return "пароль"
       }     
     },
-    // a: function() {
-    //   if(this.showFieldError) {
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    // }
   },
   methods: {
     loginFocused: function() {
@@ -55,21 +48,22 @@ export default {
       this.passwordValue = false;
     },
     animateWrongInput: function() {
-      event.preventDefault();
       let self = this;
       let inputElement = document.querySelector('[name="login"]');
       if (!inputElement.value.match(this.testUserEmail)) {
+        event.preventDefault();
         self.showFieldError = true;
+        setTimeout(function() {
+          self.showFieldError = false;
+        }, 3000);
+      } else {
+        //отправка данных на сервер
       }
-      setTimeout(function() {
-        self.showFieldError = false;
-      }, 3000);
-      // console.log(inputElement.value);
+      
     }
   }
 };
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 h3 {
@@ -198,6 +192,4 @@ a {
       background-color: #000000;
     }
   }
-
-
 </style>
