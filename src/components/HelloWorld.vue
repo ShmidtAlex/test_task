@@ -8,7 +8,6 @@
         <div class="choose_action_block">
           <!-- можно реализовать через роутер? -->
           <input style="width: 56px" type="button" class="auth_enter" :class="{auth_enter_active: existUser }" value="вход" @click="newUser = false, existUser = true" >
-
           <input style="width: 120px" type="button" class="auth_enter" :class="{auth_enter_active: newUser }" value="регистрация" @click="newUser = true, existUser = false">
         </div>
       </div>
@@ -16,7 +15,7 @@
         <div v-if="existUser" class="enter_user-data_block">
           <ExistUser />
         </div>
-         <div v-if="newUser" class="enter_user-data_block">
+        <div v-if="newUser" class="enter_user-data_block">
           <NewUser />
         </div>
       </div>
@@ -39,16 +38,16 @@ export default {
   data: function() {
     return {
       existUser: true,
-      newUser: false,
+      newUser: false
     }
   },
   methods: {
-    showExistingAccaunt: function(){
+    showExistingAccaunt: function() {
       console.log("showExistingAccaunt");
     },
-    registerNewAccaunt: function(){
+    registerNewAccaunt: function() {
       console.log("registerNewAccaunt");
-    },
+    }
   }
 };
 </script>
@@ -99,7 +98,6 @@ export default {
           font-style: normal;
           font-weight: bold;
           font-size: 22px;
-          // line-height: 47px;
           text-align: center;
           text-transform: uppercase;
           color: #86764B;
@@ -156,12 +154,12 @@ export default {
       align-items: center;
       width: 100%;
       height: 100%;
-      border-top:1px solid #E5E5E5;
+      border-top: 1px solid #E5E5E5;
     }
   }
 }
 @media (max-width: 568px) {
-   .authorisation_block {
+  .authorisation_block {
     position: static;
   }
   .authorisation_form {
@@ -194,7 +192,7 @@ export default {
           // line-height: 47px;
           text-align: center;
           text-transform: uppercase;
-          color: #86764B;
+          color: #86764b;
           margin: 0;
           padding: 0;
         }
@@ -229,7 +227,7 @@ export default {
           align-items: center;
         }
         .auth_enter_active {
-          border-bottom: 1px solid #85754A;
+          border-bottom: 1px solid #85754a;
           font-weight: 800;
         }
       }
@@ -249,7 +247,7 @@ export default {
       align-items: center;
       width: 100%;
       height: 100%;
-      border-top:1px solid #E5E5E5;
+      border-top: 1px solid #E5E5E5;
     }
   }
 }

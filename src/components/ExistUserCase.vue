@@ -157,7 +157,15 @@ a {
     line-height: 26px;
     padding: 20px;
     color: #C4C4C4;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
   }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:active,
+    input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    }
   .user_data:first-child {
     margin-top: 10px;
   }
