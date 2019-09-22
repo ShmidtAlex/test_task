@@ -92,6 +92,7 @@ Vue.use(VueAxios, axios);
     justify-content: center;
     align-items: center;
     background-color: #FFFFFF;
+    z-index: 100;
     a {
       font-weight: bold;
       color: #000000;
@@ -315,6 +316,7 @@ Vue.use(VueAxios, axios);
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     a {
       font-weight: bold;
       color: #2c3e50;
@@ -427,7 +429,7 @@ Vue.use(VueAxios, axios);
     text-transform: uppercase;
     color: #000000;
     transition: all 1s ease-in-out;
-    opacity: 0;
+    opacity: 1;
     overflow: hidden;
   }
   .tabs_group_active {

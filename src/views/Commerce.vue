@@ -8,6 +8,6 @@
     height: 580px;
       width: 100%;
       background-color: #ffffff;
-      margin: 3px 0;
+      margin: 3px 0 0;
   }
 </style>

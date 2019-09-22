@@ -34,15 +34,22 @@
   };
 </script>
 <style scoped lang="less">
+@media (min-width: 569px) {
   .people {
-    height: 580px;
+    height: 600px;
+  }
+  .table_block {
+    height: 74%;
+  }
+}
+  .people {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     background-color: #ffffff;
     width: 100%;
-    margin: 3px 0;
+    margin: 3px 0 0;
     h3 {
       margin-left: 32px;
       text-transform: uppercase;
@@ -55,7 +62,6 @@
     .table_block {
       margin-left: 32px;
       width: 100%;
-      height: 74%;
       table {
         width: 100%;
         height: 100%;
@@ -68,6 +74,8 @@
       align-items: center;
       margin-left: 32px;
       width: 100%;
+      height: 150px;
+      flex-wrap: wrap;
       .people_btn {
         width: 255px;
         height: 46px;
@@ -84,7 +92,7 @@
         font-weight: bold;
         text-transform: uppercase;
         color: #ffffff;
-        margin: 0 20px 58px 0;
+        margin: 0 20px 0px 0;
       }
       .people_btn:hover {
         background-color: #424242;
@@ -93,6 +101,22 @@
         background-color: #000000;
       }
     }
-
   }
+
+@media (max-width: 568px) {
+  .people {
+    height: 650px;
+    padding: 66px 0;
+    width: 83%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .table_block {
+      height: fit-content;
+      margin: 0;
+    }
+    .buttons_block {
+      margin: 0;
+    }
+  }
+}
 </style>

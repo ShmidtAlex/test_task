@@ -31,6 +31,7 @@ export default {
     justify-content: center;
     align-items: center;
     margin-top: 3px;
+    background-color: #ffffff;
   }
   .background_container {
     width: 100%;
@@ -40,7 +41,7 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 5px;
+    margin-bottom: 12px;
   }
 
   .background {
