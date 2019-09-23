@@ -36,14 +36,14 @@ export default {
     HotTable,
     HotColumn
   },
-    methods: {
-      recieveData: function() {
-        this.axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
-          this.hotData = response.data[0];
-          console.log(response.data);
-        })
-      }
-    },
+  methods: {
+    recieveData: function() {
+      this.axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
+        this.hotData = response.data[0];
+        console.log(response.data);
+      })
+    }
+  },
 };
 </script>
 
