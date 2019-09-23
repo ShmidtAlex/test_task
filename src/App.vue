@@ -81,6 +81,7 @@ Vue.use(VueAxios, axios);
     flex-direction: column;
     align-items:center;
     background-color: #E5E5E5;
+    height: 100%;
   }
   #nav {
     width: 100%;
@@ -303,6 +304,7 @@ Vue.use(VueAxios, axios);
     display: flex;
     flex-direction: column;
     align-items:center;
+    height: 100%;
   }
   #nav {
     width: 100%;

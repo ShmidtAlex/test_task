@@ -161,6 +161,7 @@ export default {
 @media (max-width: 568px) {
   .authorisation_block {
     position: static;
+    width: 100vw;
   }
   .authorisation_form {
     display: flex;
@@ -188,7 +189,7 @@ export default {
           font-family: Roboto;
           font-style: normal;
           font-weight: bold;
-          font-size: 22px;
+          font-size: 18px;
           // line-height: 47px;
           text-align: center;
           text-transform: uppercase;
@@ -205,7 +206,6 @@ export default {
         width: 200px;
         height: 34px;
         margin-bottom: -24px;
-        z-index: -1;
         .auth_enter {
           border: none;
           background-color: transparent;

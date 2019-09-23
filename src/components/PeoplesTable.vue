@@ -28,6 +28,9 @@ export default {
   components: {
     HotTable,
     HotColumn
+  },
+  methods: {
+    
   }
 };
 </script>
