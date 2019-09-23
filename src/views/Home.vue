@@ -32,6 +32,7 @@ export default {
     align-items: center;
     margin-top: 3px;
     background-color: #ffffff;
+    height: 100%;
   }
   .background_container {
     width: 100%;
@@ -47,8 +48,9 @@ export default {
   .background {
     background-image: url("../assets/Background.png");
     background-size: cover;
+    background-position: bottom;
     width: 100%;
-    height: 580px;
+    height: 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
@@ -64,6 +66,7 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 100%
   }
   .background_container {
     width: 100%;
@@ -81,7 +84,7 @@ export default {
     background: #F6F6F6;
     background-size: cover;
     width: 100%;
-    height: 580px;
+    height: 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: row;

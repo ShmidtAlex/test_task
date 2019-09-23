@@ -81,12 +81,12 @@ Vue.use(VueAxios, axios);
     flex-direction: column;
     align-items:center;
     background-color: #E5E5E5;
+    height: 100%;
   }
+}
   #nav {
     width: 100%;
-    height: 100px;
-    width: 100%;
-    height: 100px;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -111,7 +111,7 @@ Vue.use(VueAxios, axios);
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      height: 77%;
+      height: 100px;
       margin: 0 32px;
       // border: 1px solid;
       width: 100%;
@@ -154,7 +154,7 @@ Vue.use(VueAxios, axios);
     text-transform: uppercase;
     color: #000000;
     // border: 1px solid black;
-    margin-bottom: -7px;
+    margin-bottom: 10px;
     a:first-child {
       margin-left: 40px;
     }
@@ -195,6 +195,8 @@ Vue.use(VueAxios, axios);
     justify-content: space-between;
     align-items: center;
     background: #424242;
+    position: fixed;
+    bottom: 0;
     .copyrights {
       display: flex;
       flex-direction: row;
@@ -303,10 +305,11 @@ Vue.use(VueAxios, axios);
     display: flex;
     flex-direction: column;
     align-items:center;
+    height: 100%;
   }
   #nav {
     width: 100%;
-    height: 60px;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -334,7 +337,7 @@ Vue.use(VueAxios, axios);
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      height: 100%;
+      height: 60px;
       width: 100%;
       margin: 0 20px;
     }
