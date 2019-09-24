@@ -43,8 +43,9 @@
     align-items: flex-start;
     background-color: #ffffff;
     width: 100%;
-    height: calc(100%-60px);
+    height: calc(100% - 60px);
     margin: 3px 0 0;
+    overflow: hidden;
     h3 {
       margin-left: 32px;
       text-transform: uppercase;
@@ -77,7 +78,7 @@
       margin: 0;
     }
     .buttons_block {
-      margin: 0;
+      margin: -145px 0 0;
     }
   }
 }
