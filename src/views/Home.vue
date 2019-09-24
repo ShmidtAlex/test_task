@@ -60,7 +60,7 @@ export default {
 @media (max-width: 568px) {
   .home {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 60px);
     display: flex;
     flex-direction: row;
     justify-content: center;

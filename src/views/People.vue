@@ -35,13 +35,7 @@
 </script>
 <style scoped lang="less">
 @media (min-width: 569px) {
-  .people {
-    height: 600px;
-  }
-  .table_block {
-    height: 74%;
-  }
-}
+  
   .people {
     display: flex;
     flex-direction: column;
@@ -49,6 +43,7 @@
     align-items: flex-start;
     background-color: #ffffff;
     width: 100%;
+    height: calc(100%-60px);
     margin: 3px 0 0;
     h3 {
       margin-left: 32px;
@@ -67,7 +62,26 @@
         height: 100%;
       }
     }    
+    
+  }
+}
+@media (max-width: 568px) {
+  .people {
+    height: 100%;
+    padding: 66px 0;
+    width: 83%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .table_block {
+      height: fit-content;
+      margin: 0;
+    }
     .buttons_block {
+      margin: 0;
+    }
+  }
+}
+.buttons_block {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -101,22 +115,4 @@
         background-color: #000000;
       }
     }
-  }
-
-@media (max-width: 568px) {
-  .people {
-    height: 650px;
-    padding: 66px 0;
-    width: 83%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    .table_block {
-      height: fit-content;
-      margin: 0;
-    }
-    .buttons_block {
-      margin: 0;
-    }
-  }
-}
 </style>
