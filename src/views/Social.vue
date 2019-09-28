@@ -4,7 +4,7 @@
   </div>
 </template>
 <style>
-  @media (min-width: 569px) {
+ @media (min-width: 569px) {
   .social {
     height: 100%;
     width: 100%;
