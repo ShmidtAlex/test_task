@@ -32,6 +32,7 @@ export default {
     align-items: center;
     margin-top: 3px;
     background-color: #ffffff;
+    height: 100%;
   }
   .background_container {
     width: 100%;
@@ -65,6 +66,7 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 100%;
     overflow: hidden;
   }
   .background_container {

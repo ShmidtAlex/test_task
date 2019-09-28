@@ -27,7 +27,7 @@
 </script>
 <style scoped lang="less">
 @media (min-width: 569px) {
-  
+ 
   .people {
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@
     width: 100%;
     height: calc(100% - 60px);
     margin: 3px 0 0;
-    overflow: hidden;
+    height: fit-content;
     h3 {
       margin-left: 32px;
       text-transform: uppercase;
@@ -56,9 +56,7 @@
         width: 100%;
         height: 100%;
       }
-    }
-
-    
+    } 
   }
 }
 @media (max-width: 568px) {
@@ -71,9 +69,6 @@
     .table_block {
       height: fit-content;
       margin: 0;
-    }
-    .buttons_block {
-      margin: -145px 0 0;
     }
   }
 }
