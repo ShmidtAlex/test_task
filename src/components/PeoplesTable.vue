@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="table" style="width: 100%">
-      <hot-table licenseKey="non-commercial-and-evaluation" :settings="apiData">
+      <hot-table licenseKey="non-commercial-and-evaluation" ref="hotTableComponent" :settings="hotSettings">
         <hot-column :width="250">
           
         </hot-column>
@@ -32,6 +32,7 @@
 <script>
 import { HotTable, HotColumn } from "@handsontable/vue";
 import Handsontable from 'handsontable';
+//ЭТО ДЛЯ ТЕСТИРОВАНИЯ, СТАТИЧЕСКИЙ ОБЪЕКТ
 // let dataObject = [
 //   {
 //     id: 1,
@@ -276,32 +277,32 @@ export default {
     return {
       dataObject: {},
       hotSettings: {
-        data: {},
+        data: this.apiData,
         rowHeaders: true,
-        // columns: [
-        //   {
-        //     data: 'name',
-        //     type: 'text'
-        //   },
-        //   {
-        //     data: 'username',
-        //     type: 'text'
-        //   },
-        //   {
-        //     data: 'phone',
-        //     type: 'text'
-        //   },
-        //   {
-        //     data: 'website',
-        //     type: 'text'
-        //   },
-        // ],
+        columns: [
+          {
+            data: 'name',
+            type: 'text'
+          },
+          {
+            data: 'username',
+            type: 'text'
+          },
+          {
+            data: 'phone',
+            type: 'text'
+          },
+          {
+            data: 'website',
+            type: 'text'
+          },
+        ],
         stretchH: 'all',
         width: 950,
         autoWrapRow: true,
         height: 487,
         maxRows: 22,
-        // rowHeaders: true,
+        rowHeaders: true,
         colHeaders: [
           'Name',
           'Username',
@@ -314,21 +315,15 @@ export default {
   },
   computed: {
     apiData: function() {
-      return this.hotSettings;
+      return this.dataObject;
     }
   },
   methods: {
     recieveData: function() {
       this.axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
-        this.hotSettings.data = response.data;
-        console.log(this.hotSettings);
-        // this.hotSettings.data.loadData(response.data);
-        // this.dataObject.forEach(function(element) {
-        //   console.log(element);
-        //   this.$refs.hotTableComponent.hotInstance.loadData([[element]]);
-        // })
-        
-        // console.log(this.dataObject);
+        console.log(response.data);
+        var data = response.data;
+        this.$refs.hotTableComponent.hotInstance.loadData(data);
       })
     }
   }
